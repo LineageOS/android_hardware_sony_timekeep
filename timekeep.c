@@ -35,6 +35,7 @@
 
 #include <sys/stat.h>
 #include <sys/time.h>
+#include <linux/android_alarm.h>
 
 #define LOG_TAG "TimeKeep"
 
@@ -126,6 +127,7 @@ int restore_time() {
 	unsigned long time_adjust = 0;
 	unsigned long epoch_since = 0;
 	int res = -1;
+	int fd;
 	char prop[PROPERTY_VALUE_MAX];
 	memset(prop, 0x0, PROPERTY_VALUE_MAX);
 	property_get(TIME_ADJUST_PROP, prop, "0");
@@ -151,10 +153,17 @@ int restore_time() {
 		restore_ats(time_adjust);
 		tv.tv_sec = epoch_since + time_adjust;
 		tv.tv_usec = 0;
-		res = settimeofday(&tv, NULL);
+
+		fd = open("/dev/alarm", O_RDWR);
+		if (fd >= 0) {
+			res = ioctl(fd, ANDROID_ALARM_SET_RTC, &tv);
+		} else {
+			ALOGI("Failed to open /dev/alarm");
+			res = settimeofday(&tv, NULL);
+		}
 		if (res != 0) {
 			ALOGI("Failed to restore time (%d), root?",
-			      res);
+			  res);
 		} else {
 			ALOGI("Time restored!");
 		}
