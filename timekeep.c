@@ -38,12 +38,17 @@
 
 #define LOG_TAG "TimeKeep"
 
+#include <android/api-level.h>
 #include <cutils/properties.h>
 #include <cutils/log.h>
 #include <errno.h>
 
 #define RTC_SYS_FILE "/sys/class/rtc/rtc0/since_epoch"
+#ifdef ANDROID_OREO
+#define RTC_ATS_FILE "/data/vendor/time/ats_2"
+#else
 #define RTC_ATS_FILE "/data/time/ats_2"
+#endif
 #define TIME_ADJUST_PROP "persist.sys.timeadjust"
 
 int read_epoch(unsigned long* epoch) {
