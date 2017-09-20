@@ -5,6 +5,10 @@ LOCAL_SRC_FILES := timekeep.c
 LOCAL_MODULE := timekeep
 LOCAL_SHARED_LIBRARIES := libcutils liblog
 LOCAL_MODULE_TAGS := optional
+
+ifeq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 26 ))" )))
+LOCAL_CFLAGS += -DANDROID_OREO=1
+endif
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
