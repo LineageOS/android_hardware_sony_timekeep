@@ -43,7 +43,11 @@
 #include <errno.h>
 
 #define RTC_SYS_FILE "/sys/class/rtc/rtc0/since_epoch"
+#if __ANDROID_API__ >= 26
+#define RTC_ATS_FILE "/data/vendor/time/ats_2"
+#else
 #define RTC_ATS_FILE "/data/time/ats_2"
+#endif
 #define TIME_ADJUST_PROP "persist.sys.timeadjust"
 
 int read_epoch(unsigned long* epoch) {
