@@ -43,7 +43,7 @@
 #include <errno.h>
 
 #define RTC_SYS_FILE "/sys/class/rtc/rtc0/since_epoch"
-#define RTC_ATS_FILE "/data/time/ats_2"
+#define RTC_ATS_FILE "/data/vendor/time/ats_2"
 #define TIME_ADJUST_PROP "persist.sys.timeadjust"
 
 int read_epoch(unsigned long* epoch) {
