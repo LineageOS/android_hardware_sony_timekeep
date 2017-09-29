@@ -5,6 +5,7 @@ LOCAL_SRC_FILES := timekeep.c
 LOCAL_MODULE := timekeep
 LOCAL_SHARED_LIBRARIES := libcutils liblog
 LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
