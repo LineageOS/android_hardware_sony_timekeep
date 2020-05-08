@@ -1,3 +1,5 @@
+ifeq ($(PRODUCT_PLATFORM_SOD),true)
+
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -27,3 +29,5 @@ ifneq ($(call math_gt_or_eq, $(PLATFORM_SDK_VERSION), 28),)
 LOCAL_PROPRIETARY_MODULE := true
 endif
 include $(BUILD_PACKAGE)
+
+endif
