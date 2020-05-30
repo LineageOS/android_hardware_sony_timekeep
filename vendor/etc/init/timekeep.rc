@@ -4,6 +4,7 @@ on boot
     mkdir /data/vendor/time 0770 system system
     chmod 0770 /data/time/ats_2
     chmod 0770 /data/vendor/time/ats_2
+    chown system net_raw /data/vendor/time/ats_2
 
     # Set system as owner of RTC node
     chown system system /sys/class/rtc/rtc0/since_epoch
