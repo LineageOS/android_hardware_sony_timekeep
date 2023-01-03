@@ -16,6 +16,24 @@
       "message": "This is pointless. Please amend the previous change.",
       "revId": "16f57acaa52f49021ea5c3b00727c8b12dcf9fdb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "515f278a_5eff8632",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14010
+      },
+      "writtenOn": "2023-01-03T13:56:45Z",
+      "side": 1,
+      "message": "Sure!",
+      "parentUuid": "0b57a941_c1a2dfa4",
+      "revId": "16f57acaa52f49021ea5c3b00727c8b12dcf9fdb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
