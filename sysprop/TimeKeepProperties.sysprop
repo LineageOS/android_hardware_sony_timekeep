@@ -1,0 +1,16 @@
+#
+# Copyright (C) 2023 The LineageOS Project
+#
+# SPDX-License-Identifier: BSD-3-Clause
+#
+
+module: "com.sony.timekeep.TimeKeepProperties"
+owner: Vendor
+
+prop {
+    api_name: "timeadjust"
+    type: Long
+    scope: Internal
+    access: ReadWrite
+    prop_name: "persist.vendor.timeadjust"
+}
