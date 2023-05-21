@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "50e354fb_e3362a12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29080
+      },
+      "writtenOn": "2023-05-21T16:44:41Z",
+      "side": 1,
+      "message": "The fist one was better...\nsystem UID is needed for writing /data/vendor/time",
+      "revId": "11c1535c71b97f0ab833e215a8121ed107235010",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
