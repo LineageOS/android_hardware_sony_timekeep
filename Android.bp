@@ -20,7 +20,8 @@ android_app {
     name: "TimeKeep",
     srcs: ["src/**/*.java"],
     certificate: "platform",
-    platform_apis: true,
-    privileged: true,
+    sdk_version: "current",
+    static_libs: ["TimeKeepProperties"],
+    proprietary: true,
     required: ["timekeep"],
 }

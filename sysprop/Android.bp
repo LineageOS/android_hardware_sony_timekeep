@@ -1,0 +1,13 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: BSD-3-Clause
+//
+
+sysprop_library {
+    name: "TimeKeepProperties",
+    srcs: ["TimeKeepProperties.sysprop"],
+    api_packages: ["android.sysprop"],
+    property_owner: "Vendor",
+    proprietary: true,
+}
