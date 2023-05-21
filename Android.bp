@@ -1,0 +1,26 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: BSD-3-Clause
+//
+
+cc_binary {
+    name: "timekeep",
+    srcs: ["timekeep.c"],
+    shared_libs: [
+        "libcutils",
+        "liblog",
+    ],
+    init_rc: ["vendor/etc/init/timekeep.rc"],
+    owner: "sony",
+    proprietary: true,
+}
+
+android_app {
+    name: "TimeKeep",
+    srcs: ["src/**/*.java"],
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    required: ["timekeep"],
+}
