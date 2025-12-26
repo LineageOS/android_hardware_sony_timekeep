@@ -31,12 +31,7 @@
 
 package com.sony.timekeep;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileNotFoundException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.Long;
@@ -51,7 +46,6 @@ import com.sony.timekeep.TimeKeepProperties;
 public class TimeKeep extends BroadcastReceiver {
 	private static final String TAG = "TimeKeep-Receiver";
 	private static final String RTC_SINCE_EPOCH = "/sys/class/rtc/rtc0/since_epoch";
-	private static final String RTC_ATS_FILE = "/data/vendor/time/ats_2";
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
@@ -63,7 +57,6 @@ public class TimeKeep extends BroadcastReceiver {
 
 		Log.d(TAG, "Setting adjust property to " + seconds);
 		TimeKeepProperties.timeadjust(seconds);
-		writeATS(seconds);
 	}
 
 	private long readEpoch() {
@@ -85,30 +78,5 @@ public class TimeKeep extends BroadcastReceiver {
 		}
 
 		return epoch;
-	}
-
-	private void writeATS(long seconds) {
-		BufferedOutputStream bos = null;
-		long milliseconds = seconds * 1000;
-		ByteBuffer buffer = ByteBuffer.allocate(8).order(ByteOrder.nativeOrder());
-		buffer.putLong(milliseconds);
-		try {
-			bos = new BufferedOutputStream(new FileOutputStream(RTC_ATS_FILE, false));
-			bos.write(buffer.array());
-			bos.flush();
-		} catch (FileNotFoundException ex) {
-			Log.w(TAG, "file " + RTC_ATS_FILE + " not found: " + ex);
-		} catch (IOException ex) {
-			Log.w(TAG, "IOException trying to sync " + RTC_ATS_FILE + ": " + ex);
-		} finally {
-			if (bos != null) {
-				try {
-					Log.w(TAG, "file " + RTC_ATS_FILE + ": " + milliseconds);
-					bos.close();
-				} catch (IOException ex) {
-					Log.w(TAG, "IOException while closing synced file: ", ex);
-				}
-			}
-		}
 	}
 }
