@@ -1,0 +1,5 @@
+(/.*)?                                                           u:object_r:vendor_file:s0
+/app(/.*)?                                                       u:object_r:vendor_app_file:s0
+/bin/timekeep                                                    u:object_r:vendor_timekeep_exec:s0
+/etc(/.*)?                                                       u:object_r:vendor_configs_file:s0
+/etc/linker.config.pb                                            u:object_r:linkerconfig_file:s0

@@ -25,3 +25,39 @@ android_app {
     proprietary: true,
     required: ["timekeep"],
 }
+
+genrule {
+    name: "gen-com.sony.timekeep.apex.rc",
+    srcs: ["timekeep.rc"],
+    out: ["com.sony.timekeep.apex.rc"],
+    cmd: "sed -E 's%/vendor/bin/%/apex/com.sony.timekeep.apex/bin/%' $(in) > $(out)",
+}
+
+prebuilt_etc {
+    name: "com.sony.timekeep.apex.rc",
+    src: ":gen-com.sony.timekeep.apex.rc",
+    installable: false,
+}
+
+apex {
+    name: "com.sony.timekeep.apex",
+
+    key: "com.android.hardware.key",
+    certificate: ":com.android.hardware.certificate",
+
+    androidManifest: "apex_AndroidManifest.xml",
+    file_contexts: "apex_file_contexts",
+    manifest: "apex_manifest.json",
+
+    updatable: false,
+    proprietary: true,
+
+    apps: ["TimeKeep"],
+    binaries: ["timekeep"],
+    prebuilts: ["com.sony.timekeep.apex.rc"],
+
+    overrides: [
+        "TimeKeep",
+        "timekeep",
+    ],
+}
