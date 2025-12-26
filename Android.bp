@@ -16,6 +16,13 @@ cc_binary {
     proprietary: true,
 }
 
+prebuilt_etc {
+    name: "sysconfig_com.sony.timekeep.xml",
+    src: "sysconfig_com.sony.timekeep.xml",
+    sub_dir: "sysconfig",
+    proprietary: true,
+}
+
 android_app {
     name: "TimeKeep",
     srcs: ["src/**/*.java"],
@@ -23,7 +30,10 @@ android_app {
     sdk_version: "current",
     static_libs: ["TimeKeepProperties"],
     proprietary: true,
-    required: ["timekeep"],
+    required: [
+        "sysconfig_com.sony.timekeep.xml",
+        "timekeep",
+    ],
 }
 
 genrule {
@@ -54,7 +64,10 @@ apex {
 
     apps: ["TimeKeep"],
     binaries: ["timekeep"],
-    prebuilts: ["com.sony.timekeep.apex.rc"],
+    prebuilts: [
+        "com.sony.timekeep.apex.rc",
+        "sysconfig_com.sony.timekeep.xml",
+    ],
 
     overrides: [
         "TimeKeep",

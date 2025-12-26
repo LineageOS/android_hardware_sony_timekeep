@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <oem-defined-uid name="com.sony.timekeep.uid" uid="2999"/>
+</config>

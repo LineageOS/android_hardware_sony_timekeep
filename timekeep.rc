@@ -1,13 +1,13 @@
 on post-fs-data
     # Create folder for timekeep
-    mkdir /data/vendor/time 0770 system system
+    mkdir /data/vendor/time 0770 oem_2999 oem_2999
     chmod 0770 /data/vendor/time/ats_2
 
 # Time service
 service timekeep /vendor/bin/timekeep restore
     class late_start
-    user system
-    group system
+    user oem_2999
+    group oem_2999
     capabilities SYS_TIME
     oneshot
     task_profiles ServiceCapacityLow
