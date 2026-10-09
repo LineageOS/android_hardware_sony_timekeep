@@ -16,6 +16,23 @@
       "message": "Changes are way too simple for a commit description this long",
       "revId": "2da81d301312339d1944a66a53ab1731960c1f88",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce9aae28_8bc2c8fa",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 28798
+      },
+      "writtenOn": "2026-10-09T20:30:33Z",
+      "side": 1,
+      "message": "not needed",
+      "revId": "2da81d301312339d1944a66a53ab1731960c1f88",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
