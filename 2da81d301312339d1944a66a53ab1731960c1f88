@@ -18,6 +18,23 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5150be69_1340461e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2026-10-09T20:39:51Z",
+      "side": 1,
+      "message": "though i think this kind of knowledge is rare and it worth keeping all/most of the descriptions, how do you think?",
+      "revId": "2da81d301312339d1944a66a53ab1731960c1f88",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ce9aae28_8bc2c8fa",
