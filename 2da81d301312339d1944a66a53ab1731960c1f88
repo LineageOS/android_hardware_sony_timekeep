@@ -35,6 +35,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bfbcae6_761d23fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-10-10T04:36:58Z",
+      "side": 1,
+      "message": "agreed, if a person wrote this I would tell them to remove it as well. The entire point of git blame and commit messages is not needing this.",
+      "parentUuid": "c11843a6_377ad8e8",
+      "revId": "2da81d301312339d1944a66a53ab1731960c1f88",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ce9aae28_8bc2c8fa",
