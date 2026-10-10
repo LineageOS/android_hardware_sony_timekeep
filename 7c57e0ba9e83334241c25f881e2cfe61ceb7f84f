@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20763508_7025adf9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 28798
+      },
+      "writtenOn": "2026-10-10T22:57:16Z",
+      "side": 1,
+      "message": "\"timekeep: Mark the app as privileged\"\n\nWould be better, SELinux change just comes in with this, making it more obvious",
+      "revId": "7c57e0ba9e83334241c25f881e2cfe61ceb7f84f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
