@@ -23,20 +23,20 @@ phony {
 }
 
 genrule {
-    name: "gen-com.sony.timekeep.apex.rc",
+    name: "gen-com.sony.timekeep.rc",
     srcs: ["timekeep.rc"],
-    out: ["com.sony.timekeep.apex.rc"],
-    cmd: "sed -E 's%/vendor/bin/%/apex/com.sony.timekeep.apex/bin/%' $(in) > $(out)",
+    out: ["com.sony.timekeep.rc"],
+    cmd: "sed -E 's%/vendor/bin/%/apex/com.sony.timekeep/bin/%' $(in) > $(out)",
 }
 
 prebuilt_etc {
-    name: "com.sony.timekeep.apex.rc",
-    src: ":gen-com.sony.timekeep.apex.rc",
+    name: "com.sony.timekeep.rc",
+    src: ":gen-com.sony.timekeep.rc",
     installable: false,
 }
 
 apex {
-    name: "com.sony.timekeep.apex",
+    name: "com.sony.timekeep",
 
     key: "com.android.hardware.key",
     certificate: ":com.android.hardware.certificate",
@@ -49,7 +49,7 @@ apex {
     proprietary: true,
 
     binaries: ["timekeep"],
-    prebuilts: ["com.sony.timekeep.apex.rc"],
+    prebuilts: ["com.sony.timekeep.rc"],
 
     overrides: [
         "TimeKeep",

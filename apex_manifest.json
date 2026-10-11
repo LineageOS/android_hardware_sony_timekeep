@@ -1,5 +1,5 @@
 {
-    "name": "com.sony.timekeep.apex",
+    "name": "com.sony.timekeep",
     "bootstrap": true,
     "version": 1
 }
