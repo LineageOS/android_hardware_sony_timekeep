@@ -16,13 +16,9 @@ cc_binary {
     proprietary: true,
 }
 
-android_app {
+// Product makefiles that still list the former app get the binary.
+phony {
     name: "TimeKeep",
-    srcs: ["src/**/*.java"],
-    certificate: "platform",
-    sdk_version: "current",
-    static_libs: ["TimeKeepProperties"],
-    proprietary: true,
     required: ["timekeep"],
 }
 
@@ -52,7 +48,6 @@ apex {
     updatable: false,
     proprietary: true,
 
-    apps: ["TimeKeep"],
     binaries: ["timekeep"],
     prebuilts: ["com.sony.timekeep.apex.rc"],
 

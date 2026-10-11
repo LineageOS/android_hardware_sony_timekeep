@@ -3,13 +3,10 @@
 TimeKeep is a small utility to keep track of time & date since the RTC 
 driver on Qualcomm chipset is read-only.
 
-It consist of two parts. A native tool, timekeep, to store and restore time and a Java 
-part (com.sony.timekeep) consisting of a single broadcastreceiver that receives 
-ACTION_TIME_CHANGED, ACTION_TIMEZONE_CHANGED and ACTION_SHUTDOWN and then calls timekeep.
-
-When the Java broadcastreceiver gets one of the above intents, timekeep is called with
-store parameter and the time delta between the set date (in seconds) and 
-/sys/class/rtc/rtc0/since_epoch is stored to a persistent property (persist.vendor.timeadjust).
+It is a single native tool, timekeep, to store and restore time. Whenever the system clock
+is set, the time delta between the set date (in seconds) and
+/sys/class/rtc/rtc0/since_epoch is stored to a persistent property (persist.vendor.timeadjust)
+and to the ATS file (/data/vendor/time/ats_2).
 
 To restore the time timekeep is called with the restore parameter. The persistent property
 containing the time delta is then read together with the since_epoch value and settimeofday
