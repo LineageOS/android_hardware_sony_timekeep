@@ -4,22 +4,9 @@ on post-fs-data
     chmod 0770 /data/vendor/time/ats_2
 
 # Time service
-service vendor.timekeep-restore /vendor/bin/timekeep restore
+service vendor.timekeep /vendor/bin/timekeep monitor
     class late_start
     user system
     group system
     capabilities SYS_TIME
-    oneshot
     task_profiles ServiceCapacityLow
-
-service vendor.timekeep-store /vendor/bin/timekeep store
-    class late_start
-    user system
-    group system
-    capabilities SYS_TIME
-    oneshot
-    task_profiles ServiceCapacityLow
-    disabled
-
-on property:sys.boot_completed=1 && property:persist.vendor.timeadjust=*
-    start vendor.timekeep-store

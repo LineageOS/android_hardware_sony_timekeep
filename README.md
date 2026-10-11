@@ -16,6 +16,10 @@ containing the time delta is then read together with the since_epoch value and s
 is set with the sum of the two. timekeep with the restore parameter needs CAP_SYS_TIME.
 The call to restore the time can for example be done in init as the example below.
 
+timekeep with the monitor parameter restores the time, then waits for the system clock to
+be set (a timerfd with TFD_TIMER_CANCEL_ON_SET) and stores the time on every change. The
+vendor.timekeep service in timekeep.rc runs it, so no other component has to call timekeep.
+
 init.example.rc:
 
 on boot

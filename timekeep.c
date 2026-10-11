@@ -36,6 +36,7 @@
 #include <unistd.h>
 
 #include <sys/stat.h>
+#include <sys/timerfd.h>
 #include <time.h>
 
 #define LOG_TAG "TimeKeep"
@@ -162,10 +163,52 @@ int restore_time() {
 	return res;
 }
 
+/* Restores the time, then stores it again whenever the system clock is set. */
+int monitor_time() {
+	struct itimerspec spec;
+	uint64_t expirations;
+	int fd;
+
+	restore_time();
+
+	fd = timerfd_create(CLOCK_REALTIME, TFD_CLOEXEC);
+	if (fd == -1) {
+		ALOGE("Failed to create the timer (%d)", errno);
+		return -errno;
+	}
+
+	/*
+	 * A timer that never runs, only cancelled when the clock is set: read()
+	 * then fails with ECANCELED, once per change. Same as AlarmManager does.
+	 * Armed after the restore, which sets the clock as well.
+	 */
+	memset(&spec, 0, sizeof(spec));
+	if (timerfd_settime(fd, TFD_TIMER_ABSTIME | TFD_TIMER_CANCEL_ON_SET,
+			    &spec, NULL) == -1) {
+		ALOGE("Failed to watch the clock (%d)", errno);
+		close(fd);
+		return -errno;
+	}
+
+	for (;;) {
+		if (read(fd, &expirations, sizeof(expirations)) != -1)
+			continue;
+
+		if (errno == ECANCELED) {
+			ALOGI("System clock was set");
+			store_time();
+		} else if (errno != EINTR) {
+			ALOGE("Failed to wait for the clock (%d)", errno);
+			close(fd);
+			return -errno;
+		}
+	}
+}
+
 int main(int argc, char* argv[]) {
 	int res = -1;
 	if (argc != 2) {
-		ALOGI("usage: timekeep store|restore");
+		ALOGI("usage: timekeep store|restore|monitor");
 		return res;
 	}
 
@@ -177,6 +220,10 @@ int main(int argc, char* argv[]) {
 
 	if (strcmp(argv[1], "restore") == 0) {
 		res = restore_time();
+	}
+
+	if (strcmp(argv[1], "monitor") == 0) {
+		res = monitor_time();
 	}
 
 	return res;
