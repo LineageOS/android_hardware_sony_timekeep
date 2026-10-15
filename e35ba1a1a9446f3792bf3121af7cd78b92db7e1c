@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3031b47a_d2ceaa88",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2026-10-15T21:29:11Z",
+      "side": 1,
+      "message": "i see no more users eligible to test this chain, anyone else can feel free to bring it back",
+      "revId": "e35ba1a1a9446f3792bf3121af7cd78b92db7e1c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
