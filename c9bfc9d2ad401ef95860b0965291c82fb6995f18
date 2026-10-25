@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "892ca99d_0f69557a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-10-25T20:59:53Z",
+      "side": 1,
+      "message": "This should probably be cherry-picked back to 23.2 and verified by someone with a shipping device there using it.",
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
