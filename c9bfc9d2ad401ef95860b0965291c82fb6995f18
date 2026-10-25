@@ -16,6 +16,23 @@
       "message": "This should probably be cherry-picked back to 23.2 and verified by someone with a shipping device there using it.",
       "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76bec11f_f637f106",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-25T21:34:22Z",
+      "side": 1,
+      "message": "You should check whether this is possible without being privileged.",
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
