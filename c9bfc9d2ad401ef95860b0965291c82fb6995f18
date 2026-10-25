@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f1528e16_05c4d53c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:07:33Z",
+      "side": 1,
+      "message": "```suggestion\ntimekeep: Fix seapp context\n```",
+      "range": {
+        "startLine": 7,
+        "startChar": 10,
+        "endLine": 7,
+        "endChar": 36
+      },
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "892ca99d_0f69557a",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 5
@@ -31,6 +54,87 @@
       "writtenOn": "2026-10-25T21:34:22Z",
       "side": 1,
       "message": "You should check whether this is possible without being privileged.",
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ac26ab8_eafe0678",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:07:33Z",
+      "side": 1,
+      "message": "reduced to just fixing seapp context matching and it still works",
+      "parentUuid": "76bec11f_f637f106",
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f92a884_7959746e",
+        "filename": "Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:07:33Z",
+      "side": 1,
+      "message": "```suggestion\n    certificate: \"platform\",\n```",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 2
+      },
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c6ab056_f7273c0e",
+        "filename": "apex_file_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:07:33Z",
+      "side": 1,
+      "message": "```suggestion\n/app(/.*)?                                                       u:object_r:vendor_app_file:s0\n/bin/timekeep                                                    u:object_r:vendor_timekeep_exec:s0\n```",
+      "range": {
+        "startLine": 2,
+        "startChar": 63,
+        "endLine": 4,
+        "endChar": 63
+      },
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60c43dca_71d02ebe",
+        "filename": "sepolicy/vendor/seapp_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:07:33Z",
+      "side": 1,
+      "message": "```suggestion\nuser\u003d_app seinfo\u003dplatform name\u003dcom.sony.timekeep domain\u003dvendor_timekeep_app type\u003dapp_data_file levelFrom\u003dall\n```",
       "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
