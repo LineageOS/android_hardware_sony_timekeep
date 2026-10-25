@@ -78,6 +78,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b1587263_f6b96ec3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-25T22:20:49Z",
+      "side": 1,
+      "message": "What about removing the platform dependency too?",
+      "parentUuid": "9ac26ab8_eafe0678",
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2f92a884_7959746e",
         "filename": "Android.bp",
         "patchSetId": 5
