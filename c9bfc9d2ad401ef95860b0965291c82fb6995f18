@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fbcaf65_82b33f17",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:44:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1528e16_05c4d53c",
+      "range": {
+        "startLine": 7,
+        "startChar": 10,
+        "endLine": 7,
+        "endChar": 36
+      },
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "892ca99d_0f69557a",
@@ -94,6 +118,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "15378ca1_907011fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:44:08Z",
+      "side": 1,
+      "message": "SELinux : /vendor/etc/selinux/vendor_seapp_contexts:  No specific seinfo value specified with name\u003d\"com.sony.timekeep\", on line 41:  insecure configuration!",
+      "parentUuid": "b1587263_f6b96ec3",
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f92a884_7959746e",
@@ -107,6 +149,30 @@
       "writtenOn": "2026-10-25T22:07:33Z",
       "side": 1,
       "message": "```suggestion\n    certificate: \"platform\",\n```",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 2
+      },
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8a871d0_a82e8249",
+        "filename": "Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:44:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2f92a884_7959746e",
       "range": {
         "startLine": 22,
         "startChar": 0,
@@ -140,6 +206,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5cffda0_87612ec4",
+        "filename": "apex_file_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:44:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5c6ab056_f7273c0e",
+      "range": {
+        "startLine": 2,
+        "startChar": 63,
+        "endLine": 4,
+        "endChar": 63
+      },
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "60c43dca_71d02ebe",
@@ -153,6 +243,24 @@
       "writtenOn": "2026-10-25T22:07:33Z",
       "side": 1,
       "message": "```suggestion\nuser\u003d_app seinfo\u003dplatform name\u003dcom.sony.timekeep domain\u003dvendor_timekeep_app type\u003dapp_data_file levelFrom\u003dall\n```",
+      "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ae726ef_16d4f5d8",
+        "filename": "sepolicy/vendor/seapp_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 35006
+      },
+      "writtenOn": "2026-10-25T22:44:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60c43dca_71d02ebe",
       "revId": "c9bfc9d2ad401ef95860b0965291c82fb6995f18",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
