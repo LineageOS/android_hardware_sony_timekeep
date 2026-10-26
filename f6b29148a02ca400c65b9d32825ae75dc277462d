@@ -16,6 +16,24 @@
       "message": "I did another chain which is better",
       "revId": "f6b29148a02ca400c65b9d32825ae75dc277462d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "355fbe7d_c3512e6c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-10-26T02:42:22Z",
+      "side": 1,
+      "message": "This is a valid fix for the current state of the repository, regardless of any other chain being applied in the future. I also don\u0027t see any other open chain. This allows devices to ship (and existing devices to be unbroken), so there is no need to -2 here.",
+      "parentUuid": "63f75e9b_366a05ba",
+      "revId": "f6b29148a02ca400c65b9d32825ae75dc277462d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
